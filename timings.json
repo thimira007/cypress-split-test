@@ -1,0 +1,84 @@
+{
+    "durations": [
+      {
+        "spec": "cypress/e2e/1-getting-started/todo.cy.js",
+        "duration": 3349
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/actions.cy.js",
+        "duration": 14034
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/aliasing.cy.js",
+        "duration": 2106
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/assertions.cy.js",
+        "duration": 3936
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/connectors.cy.js",
+        "duration": 2163
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/cookies.cy.js",
+        "duration": 2485
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/cypress_api.cy.js",
+        "duration": 2383
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/files.cy.js",
+        "duration": 2578
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/location.cy.js",
+        "duration": 1899
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/misc.cy.js",
+        "duration": 3294
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/navigation.cy.js",
+        "duration": 2922
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/network_requests.cy.js",
+        "duration": 3455
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/querying.cy.js",
+        "duration": 2563
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/spies_stubs_clocks.cy.js",
+        "duration": 4664
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/storage.cy.js",
+        "duration": 2815
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/traversal.cy.js",
+        "duration": 3584
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/utilities.cy.js",
+        "duration": 3226
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/viewport.cy.js",
+        "duration": 4378
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/waiting.cy.js",
+        "duration": 6204
+      },
+      {
+        "spec": "cypress/e2e/2-advanced-examples/window.cy.js",
+        "duration": 1734
+      }
+    ]
+  }
