@@ -1,0 +1,26 @@
+name: Run Cypress Tests parallel 
+on: workflow_dispatch
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2, 3] # Run 3 parallel copies (adjust as needed)
+    steps:
+    - name: Print current branch
+      run: echo "Workflow was triggered on branch ${GITHUB_REF#refs/heads/}"
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Run Cypress tests
+      uses: cypress-io/github-action@v5
+        env:
+          # Pass total jobs and the current job index to cypress-split
+          SPLIT: ${{ strategy.job-total }}
+          SPLIT_INDEX: ${{ strategy.job-index }}
