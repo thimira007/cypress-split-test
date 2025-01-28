@@ -63,22 +63,6 @@
       {
         "spec": "cypress/e2e/2-advanced-examples/traversal.cy.js",
         "duration": 3584
-      },
-      {
-        "spec": "cypress/e2e/2-advanced-examples/utilities.cy.js",
-        "duration": 3226
-      },
-      {
-        "spec": "cypress/e2e/2-advanced-examples/viewport.cy.js",
-        "duration": 4378
-      },
-      {
-        "spec": "cypress/e2e/2-advanced-examples/waiting.cy.js",
-        "duration": 6204
-      },
-      {
-        "spec": "cypress/e2e/2-advanced-examples/window.cy.js",
-        "duration": 1734
       }
     ]
   }
