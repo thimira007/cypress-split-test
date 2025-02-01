@@ -1,0 +1,35 @@
+name: Run Cypress Tests parallel with dynamic nodes
+on:
+  workflow_dispatch:
+    inputs:
+      num_nodes:
+        description: 'Number of parallel nodes to run'
+        required: true
+        default: 3
+        type: number
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: ${{ range(1, github.event.inputs.num_nodes + 1) }}
+    steps:
+    - name: Print current branch
+      run: echo "Workflow was triggered on branch ${GITHUB_REF#refs/heads/}"
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Run Cypress tests
+      uses: cypress-io/github-action@v5
+      env:
+        # Pass total jobs and the current job index to cypress-split
+        SPLIT: ${{ strategy.job-total }}
+        SPLIT_INDEX: ${{ strategy.job-index }}
+        SPLIT_FILE: 'timings.json'
