@@ -2,11 +2,11 @@ name: Run Cypress Tests parallel with dynamic nodes
 on:
   workflow_dispatch:
     inputs:
-      num_nodes:
-        description: 'Number of parallel nodes to run'
+      containers:
+        description: 'Comma-separated list of parallel nodes (e.g., 1,2,3)'
         required: true
-        default: 3
-        type: number
+        default: 1,2,3
+        type: string
 
 jobs:
   cypress:
@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containers: ${{ range(1, github.event.inputs.num_nodes + 1) }}
+        containers: ${{ fromJSON(format('[{0}]', github.event.inputs.containers)) }}
     steps:
     - name: Print current branch
       run: echo "Workflow was triggered on branch ${GITHUB_REF#refs/heads/}"
