@@ -5,7 +5,7 @@ on:
       containers:
         description: 'Comma-separated list of parallel nodes (e.g., 1,2,3)'
         required: true
-        default: 1,2,3
+        default: '1,2,3'
         type: string
 
 jobs:
