@@ -35,6 +35,7 @@ jobs:
         SPLIT_FILE: 'timings.json'
         
   reporting:
+    needs: cypress
     runs-on: ubuntu-latest
     steps:
       - name: Greet the reader
