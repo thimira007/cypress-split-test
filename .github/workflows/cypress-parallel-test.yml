@@ -33,3 +33,11 @@ jobs:
         SPLIT: ${{ strategy.job-total }}
         SPLIT_INDEX: ${{ strategy.job-index }}
         SPLIT_FILE: 'timings.json'
+        
+    - name: Greet the reader
+      uses: slackapi/slack-github-action@v2.0.0
+      with:
+        webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+        webhook-type: incoming-webhook
+        payload: |
+            text: "Greetings!"
